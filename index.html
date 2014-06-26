@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="fb-root"></div>
+        <script>
+          window.fbAsyncInit = function() {
+            // init the FB JS SDK
+            FB.init({
+              appId      : '1417517588461088',                        // App ID from the app dashboard
+              channelUrl : '//www.beardbro.com/channel.html', // Channel file for x-domain comms
+              status     : true,                                 // Check Facebook Login status
+              xfbml      : true                                  // Look for social plugins on the page
+            });
+
+            // Additional initialization code such as adding Event Listeners goes here
+            // FB.login(function(response) {
+            //   if ( response.status === 'connected' ) {
+            //     FB.api('/me', function(response) {
+            //       console.log(response);
+            //     });
+            //   }
+            // }, {scope: 'publish_actions'});
+
+          };
+
+          // Load the SDK asynchronously
+          (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <script type="text/javascript">
+          window.twttr = (function (d,s,id) {
+            var t, js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+            js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+            return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+          }(document, "script", "twitter-wjs"));
+        </script>
+
+        <section class="wrapper">
+
+          <section class="ambassadors">
+
+            <section class="pickers">
+              <p>Select a person to share as</p>
+
+              <div class="btn btn-primary names" data-ambid="0" data-name="Blair">Blair</div>
+              <div class="btn btn-primary names" data-ambid="1" data-name="Joe">Joe</div>
+              <div class="btn btn-primary names" data-ambid="2" data-name="Jon">Jon</div>
+              <div class="btn btn-primary names" data-ambid="3" data-name="Bob">Bob</div>
+              <div class="btn btn-primary names" data-ambid="4" data-name="Jack">Jack</div>
+            </section>
+
+            <section class="pickers">
+              <p>Select a URL to share</p>
+
+              <div class="btn btn-primary url" data-url="http://beardbro.com">Beardbro</div>
+              <div class="btn btn-primary url" data-url="http://fifthroad.net">Fifth Road</div>
+              <div class="btn btn-primary url" data-url="http://dontkissandtell.com">Don't kiss and tell</div>
+            </section>
+
+          </section>
+
+          <!-- <div class="btn-group" data-toggle="buttons" id="ambassadors">
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="option1" data-name="Blair" data-ambId="1"> Blair
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="option2" data-name="Joe" data-ambId="2"> Joe
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="option3" data-name="Celsea" data-ambId="3"> Celsea
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="option4" data-name="Plamen" data-ambId="4"> Plamen
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="option5" data-name="Shawn" data-ambId="5"> Shawn
+            </label>
+          </div>
+
+          <p>Select a URL to share</p>
+
+          <div class="btn-group" data-toggle="buttons" id="url">
+            <label class="btn btn-primary">
+              <input type="radio" name="url" data-url="http://beardbro.com"> Beardbro
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="url" data-url="http://fifthroad.net"> Fifth Road
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="url" data-url="http://dontkissandtell.com"> Don't Kiss and Tell
+            </label>
+          </div> -->
+
+          <section class="tRex">
+            <p>Select a tool to share</p>
+
+            <nav>
+              <div class="btn-group" data-toggle="buttons" id="tRexNav">
+                <label class="btn btn-primary active">
+                  <input type="radio" checked="true" name="share" id="email"> Email
+                </label>
+                <label class="btn btn-primary">
+                  <input type="radio" name="share" id="facebook"> FB
+                </label>
+                <label class="btn btn-primary">
+                  <input type="radio" name="share" id="twitter"> Twitter
+                </label>
+              </div>
+            </nav>
+
+            <section class="share email">
+              <h2>Share via Email</h2>
+              <label for="yourEmail">Your Email</label>
+              <input type="email" id="yourEmail">
+
+              <label for="friendEmail">Friend's Email</label>
+              <input type="email" id="friendEmail">
+
+              <label for="emailText">Email Content</label>
+              <textarea name="emailText" id="emailText"></textarea>
+              <div class="btn btn-default" id="sendEmail">Send Email</div>
+            </section>
+
+            <section class="share facebook">
+              <h2>Share via Facebook</h2>
+              <div class="btn btn-default" id="fbShare">Share</div>
+            </section>
+
+            <section class="share twitter">
+              <h2>Share via Twitter</h2>
+              <div class="btn btn-default" id="new-button"></div>
+            </section>
+
+          </section>
+
+
+        </section>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
